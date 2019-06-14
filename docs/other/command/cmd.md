@@ -1,0 +1,5 @@
+1、查看进程
+wmic process get name,executablepath,processid|findstr pid
+
+
+C:\Program Files (x86)\Common Files\NetSarang;C:\Perl64\site\bin;C:\Perl64\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Lenovo\Touch Fingerprint Software\;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;%JAVA_HOME%\bin;%MAVEN_HOME%\bin;E:\software\Git\cmd;%TOMCAT_HOME%\bin;%MYSQL_HOME%\bin;D:\tor\bin;%MINGW_HOME%\bin;E:\software\tortoisehg\;E:\software\Redis-x64-3.2.100;%PYTHON_HOME%\;E:\software\node\;%GO_HOME%\bin;%SCALA_HOME%\bin;E:\software\python27\Scripts;%GRADLE_HOME%\bin;%GROOVY_HOME%\bin;
