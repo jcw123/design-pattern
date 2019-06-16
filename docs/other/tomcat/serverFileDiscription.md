@@ -40,6 +40,7 @@ Processor用于将EndPoint接收到的Socket封装成Request,Adapter用于将Req
 
 五、webapp三种部署方式
 1、通过XML文件描述符
+
 2、WAR包
 3、文件目录
 
@@ -65,7 +66,7 @@ Processor用于将EndPoint接收到的Socket封装成Request,Adapter用于将Req
 
 
 七、请求和响应过程
-1、首先建立连接，会通过Acceptor类来结构连接，同时注册到Poller对象的中
+1、首先建立连接，会通过Acceptor类来接收连接，同时注册到Poller对象的中
 2、对于Poller，会启动一个线程定时监控请求
 3、有请求过来时，会调用Poller中的processKey方法来处理对应的请求，在processKey中会实例化一个SocketProcessorBase对象，将对于的请求关联到这个对象中，然后SocketProcessorBase这个对象就作为一个任务放到线程池中执行；然后会调用SocketProcessorBase这个类的子类中的doRun方法；dnRun方法会调用AbstractEndPoint的具体子类中的Handler对象的process方法执行请求；process方法中会再次刁调用service方法执行，service方法中会再次调用Adapter实例的service方法执行；
 4、接下来就会通过责任链的方式执行：
