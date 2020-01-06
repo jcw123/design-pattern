@@ -25,7 +25,7 @@ public class Main {
 ```
 
 当new一个ClassPahtXmlApplicationContext时候，内部会调用AbstractApplicationContext类中的refresh方法，通过这个方法，
-会完成上线文的初始化工作，通过配置文件，会完成bean定义结构的转换。对于单例模式，且不是懒加载的类，会完成bean自身的实例化。
+会完成上下文的初始化工作，通过配置文件，会完成bean定义结构的转换。对于单例模式，且不是懒加载的类，会完成bean自身的实例化。
 
 refresh方法的内部实现如下：
 ```java
@@ -50,7 +50,7 @@ public void refresh() throws BeansException, IllegalStateException {
 
 			try {
 				// Allows post-processing of the bean factory in context subclasses.
-        // 目前是一个空时间，可以重写在bean工厂类中注入新的后处理器
+        // 目前是一个空实现，可以重写在bean工厂类中注入新的后处理器
 				postProcessBeanFactory(beanFactory);
 
 				// Invoke factory processors registered as beans in the context.
