@@ -15,3 +15,6 @@
 
 4、高级技巧
 * 使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑
+
+5、官网教程
+https://standardmarkdown.com/

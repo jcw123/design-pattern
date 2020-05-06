@@ -67,7 +67,7 @@ bean的定义的方法。
 但是可以在初始化上下文时注入内容。（这个方法中的内容看着很长，但是逻辑是很简单的，只是在处理bean的顺序上
 是存在优先级的。）
 - 获取BeanDefinitionRegistryPostProcessor实现这个接口的bean的name，然后按照实现PriorityOrdered、Ordered、其他的执行，每一个Processor只会执行一遍，首先执行postProcessBeanDefinitionRegistry这个方法。全部执行完之后，然后postProcessBeanFactory这个方法。（注：通过这些操作，可以注入新的bean的definition）
-- 获取BeanFactoryPostProcessor上线这个接口的bean的name，然后执行过程中排除上面已经执行过得processor，然后按照
+- 获取BeanFactoryPostProcessor实现这个接口的bean的name，然后执行过程中排除上面已经执行过得processor，然后按照
 PriorityOrdered、Ordered、其他的顺序依次执行各个processor的postProcessBeanFactory这个方法。
 
 ##### registerBeanPostProcessors(beanFactory)
