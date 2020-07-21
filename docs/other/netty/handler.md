@@ -1,0 +1,1 @@
+1. 服务端可以设置handler和childHandler，其中handler是在初始化时就执行，而childHandler会在客户端成功connect后才执行；

@@ -18,4 +18,4 @@ git rebase --onto upstream Abranch Bbranch
 参数说明：
 （1）--onto branch
 相当于将分支重置到这个branch上，相当于执行了git reset --hard branch
-(2)如果不传--onto，会议upstream为基底，如果upstream也不传，会以配置中的upstream为基底。
+(2)如果不传--onto，会以upstream为基底，如果upstream也不传，会以配置中的upstream为基底。
