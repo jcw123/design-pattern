@@ -15,7 +15,3 @@
 
 6. jstack
 显示虚拟机的线程快照
-
-online-write-datasource-30=jdbc:mysql://my11907m.mysql.jddb.com:3358/orderlist31?useUnicode=true&amp;characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=1000
-
-biguser-online-read-datasource-30=jdbc:mysql://my11907sd.mysqlmjq.jddb.com:3358/orderlist31?useUnicode=true&amp;characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=1000

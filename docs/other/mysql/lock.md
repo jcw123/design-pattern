@@ -7,6 +7,9 @@
 #### Intention Locks(意向锁)
 - An intention shared lock (IS) indicates that a transaction intends to set a shared lock on individual rows in a table
 - An intention exclusive lock (IX) indicates that a transaction intends to set an exclusive lock on individual rows in a table.
+意向锁的作用：
+意向锁主要是解决行锁和表锁之间的冲突，如果打算获取表锁时，第一步得判断是否有其他事务获取了表锁，第二步是判断是否有其他事务占据了行锁，如果直接遍历每一行效率太低，因此通过一个意向锁表名是否有其他事务占据对应的行锁，类似于归一化；
+https://www.zhihu.com/question/51513268
 
 #### gap Lock
 ```sql
@@ -16,6 +19,7 @@ SELECT c1 FROM t WHERE c1 BETWEEN 10 and 20 FOR UPDATE;
 
 #### record Lock
 - A lock on an index record. For example, SELECT c1 FROM t WHERE c1 = 10 FOR UPDATE; prevents any other transaction from inserting, updating, or deleting rows where the value of t.c1 is 10. Contrast with gap lock and next-key lock
+> 记录锁是一种行锁，是在对应的记录上加入排他锁，不允许机器事务插入、更新和删除；但是允许查询操作；
 
 #### next-key Lock
 - A next-key lock is a combination of a record lock on the index record and a gap lock on the gap before the index record
@@ -41,5 +45,22 @@ lock table test1 read;
 lock table test1 write;
 ```
 
+- sql层面加S锁
+select * lock in share mode;
+- sql层面加X锁
+select * for update;
+
+参考文章总结：
+- 记录锁、间隙锁、临键锁，都属于排它锁；
+- 记录锁就是锁住一行记录；
+- 间隙锁只有在事务隔离级别 RR 中才会产生；
+- 唯一索引只有锁住多条记录或者一条不存在的记录的时候，才会产生间隙锁，指定给某条存在的记录加锁的时候，只会加记录锁，不会产生间隙锁；
+- 普通索引不管是锁住单条，还是多条记录，都会产生间隙锁；
+- 间隙锁会封锁该条记录相邻两个键之间的空白区域，防止其它事务在这个区域内插入、修改、删除数据，这是为了防止出现 幻读 现象；
+- 普通索引的间隙，优先以普通索引排序，然后再根据主键索引排序（多普通索引情况还未研究）；
+- 事务级别是RC（读已提交）级别的话，间隙锁将会失效
+
 参考文章：
 1. https://dev.mysql.com/doc/refman/5.7/en/innodb-locking.html
+2. https://www.cnblogs.com/rjzheng/p/9950951.html
+3. https://zhuanlan.zhihu.com/p/48269420

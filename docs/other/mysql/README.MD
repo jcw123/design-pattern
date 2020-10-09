@@ -24,3 +24,7 @@ where是一个约束声明，having是一个过滤声明
 
 - on和where的区别：
 参考文章：https://zhuanlan.zhihu.com/p/127137604
+
+参考文章：
+https://zhuanlan.zhihu.com/p/66352669
+查看mysql已有bug的网站：http://bugs.mysql.com/

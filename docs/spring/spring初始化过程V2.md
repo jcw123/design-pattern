@@ -36,6 +36,7 @@ refresh方法采用template pattern设计模式，内部执行方法如下：
 bean的定义的方法。
 > NamespaceHandler这个接口和对应的实现类很重要，主要是用来解析xml文件生成最终的BeanDefinition。
 >ClassPathBeanDefinitionScanner这个类的doScan这个类扫描component-scan这个配置指定的bean。
+AbstractRefreshableApplicationContext这个类中的loadBeanDefinitions方法非常重要，将所有的bean的定义加载到bean工厂中；
 
 
 执行步骤如下：

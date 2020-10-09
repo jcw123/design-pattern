@@ -2,15 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dcf3d14-a47d-435a-bd9b-d32a0daf7a7d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/other/DDD/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/DDD/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/designPatterns/visitor.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/designPatterns/visitor.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/JVM/jvm调优常用命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/JVM/jvm调优常用命令.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/other/JVM/垃圾收集器和内存分配策略.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/JVM/垃圾收集器和内存分配策略.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/other/git/git_cherry_pick.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/git/git_cherry_pick.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/other/git/git_rebase.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/git/git_rebase.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/other/git/常用命令v1.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/git/常用命令v1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/other/linux/基本命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/linux/基本命令.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/important/v2.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/important/v2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/important/v3.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/important/v3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/language/lua/script/redis/limit_v1.lua" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/language/lua/script/redis/limit_v1.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/mysql/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/mysql/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/mysql/explain.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/mysql/explain.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/mysql/lock.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/mysql/lock.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/mysql/sql语法.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/mysql/sql语法.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/mysql/隔离级别.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/mysql/隔离级别.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/network/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/network/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/network/运输层.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/network/运输层.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/redis/雪崩和击穿.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/redis/雪崩和击穿.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/tomcat/serverFileDiscription.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/other/tomcat/serverFileDiscription.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/priciples/DIP.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/priciples/DIP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/priciples/ISP.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/priciples/ISP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/priciples/LSP.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/priciples/LSP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/priciples/LoD.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/priciples/LoD.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/priciples/OCP.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/priciples/OCP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/priciples/SRP.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/priciples/SRP.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/spring/spring初始化过程V2.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/spring/spring初始化过程V2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/spring/v1.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/spring/v1.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,10 +45,6 @@
   </component>
   <component name="MavenRunner">
     <option name="jreName" value="1.6" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1032" />
   </component>
   <component name="ProjectId" id="1aCtQlCvl0B2bmdf9DKeHL1Cwl5" />
   <component name="PropertiesComponent">
@@ -113,6 +123,7 @@
       <workItem from="1563864746856" duration="4000" />
       <workItem from="1568427305076" duration="15000" />
       <workItem from="1586251391436" duration="8000" />
+      <workItem from="1600826201945" duration="32000" />
     </task>
     <servers />
   </component>
@@ -124,7 +135,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -6,6 +6,7 @@ if not val then
   redis.call('INCRBY', key, 1)
   redis.call('expire', key, windows)
   return 0 -- 0表示不限流
+end
 local current = tonumer(redis.call('get', key) or "0")
 if current + 1 > limit then
   return 1 -- 表示限流
