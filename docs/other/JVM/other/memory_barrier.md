@@ -14,3 +14,6 @@
 
 参考文档：
 https://zhuanlan.zhihu.com/p/29881777
+
+##### memory barrier
+1. 编译器或者操作系统

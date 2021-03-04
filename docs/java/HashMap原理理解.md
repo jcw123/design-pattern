@@ -26,3 +26,17 @@
 （1）链表结构转为红黑树结构
 
 （2）红黑树转为链表
+
+5、有趣的tableSizeFor方法
+根据传递的capacity方法，计算第一个大于等于capacity的2的整数幂；
+```java
+static final int tableSizeFor(int cap) {
+        int n = cap - 1;
+        n |= n >>> 1;  // 假设为1的最高位为m，经过这个操作后，m，m-1为都为1；
+        n |= n >>> 2; // 经过这个后，m,...m-3都为1；
+        n |= n >>> 4; // 经过这个后，m,... m-7都为1；
+        n |= n >>> 8; // 经过这个后，m,...m-15都为1；
+        n |= n >>> 16; // 经过这个后， m,...m-31都为1；
+        return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
+    }
+```
