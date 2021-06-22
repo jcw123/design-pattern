@@ -15,19 +15,26 @@ https://www.zhihu.com/question/51513268
 ```sql
 -- 导致，记录10到20之前存在间隙锁，在此区间不能进行插入操作；
 SELECT c1 FROM t WHERE c1 BETWEEN 10 and 20 FOR UPDATE;
+
+-- 如果id是唯一索引，则使用record lock，如果id不是一个索引或者是一个非唯一索引，则使用的是间隙锁。间隙锁可以被多个事务拥有，间隙锁的主要作用就是在间隙范围内，不需要插入、修改、删除数据。
+SELECT * FROM child WHERE id = 100;
 ```
 
 #### record Lock
-- A lock on an index record. For example, SELECT c1 FROM t WHERE c1 = 10 FOR UPDATE; prevents any other transaction from inserting, updating, or deleting rows where the value of t.c1 is 10. Contrast with gap lock and next-key lock
-> 记录锁是一种行锁，是在对应的记录上加入排他锁，不允许机器事务插入、更新和删除；但是允许查询操作；
+> 排它锁是一种概念，record lock是排它锁的一种具体实现。
 
-#### next-key Lock
+- A lock on an index record. For example, SELECT c1 FROM t WHERE c1 = 10 FOR UPDATE; prevents any other transaction from inserting, updating, or deleting rows where the value of t.c1 is 10. Contrast with gap lock and next-key lock
+> 记录锁是一种行锁，是在对应的记录上加入排他锁，不允许机器事务插入、更新和删除；但是允许查询操作；如果记录上没有索引，会隐式创建一个索引。
+
+#### next-key Locks
 - A next-key lock is a combination of a record lock on the index record and a gap lock on the gap before the index record
+
+参考文章：https://zhuanlan.zhihu.com/p/35477890
 
 #### Insert Intention Locks
 - An insert intention lock is a type of gap lock set by INSERT operations prior to row insertion. This lock signals the intent to insert in such a way that multiple transactions inserting into the same index gap need not wait for each other if they are not inserting at the same position within the gap
 
-#### AUTO-INC Locks
+#### AUTO-INC Locks（算是找到一种表锁了）
 - An AUTO-INC lock is a special table-level lock taken by transactions inserting into tables with AUTO_INCREMENT columns. In the simplest case, if one transaction is inserting values into the table, any other transactions must wait to do their own inserts into that table, so that rows inserted by the first transaction receive consecutive primary key values
 
 #### Predicate Locks for Spatial Indexes

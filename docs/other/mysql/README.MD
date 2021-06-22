@@ -28,3 +28,13 @@ where是一个约束声明，having是一个过滤声明
 参考文章：
 https://zhuanlan.zhihu.com/p/66352669
 查看mysql已有bug的网站：http://bugs.mysql.com/
+
+
+#当前运行的所有事务
+select * from information_schema.innodb_trx;  
+
+#当前出现的锁
+select * from information_schema.innodb_locks;
+
+#锁等待的对应关系
+select * from information_schema.innodb_lock_waits
