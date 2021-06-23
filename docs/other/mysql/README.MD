@@ -17,7 +17,6 @@
 （9）DISTINCT：去除重复数据，产生虚拟表VT9；
 （10）ORDER BY: 对虚拟表VT9按照指定的列进行排序操作，产生虚拟表VT10
 （11）LIMIT：取出指定的行，产生虚拟表VT11，返回给用户。
-
 - having和where的区别：
 参考文档：https://zhuanlan.zhihu.com/p/100574455
 where是一个约束声明，having是一个过滤声明

@@ -1,0 +1,5 @@
+1、 绑定好宿主机端口和容器端口后，还是没法访问mysql实例
+解决方案：需要设置mysql的访问权限，参考如下：
+alter user 'root'@'%' identified with mysql_native_password by 'jiangcw';
+
+2、
