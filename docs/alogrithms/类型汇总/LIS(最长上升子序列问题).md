@@ -6,7 +6,7 @@
 
 ## 解法
 
-### 解法一
+#### 解法一
 ```java
 public largestCommonIncreaseSequence(int[] arr) {
     int len = arr.length;
@@ -29,7 +29,7 @@ public largestCommonIncreaseSequence(int[] arr) {
 }
 ```
 
-### 解法二
+#### 解法二
 ```java
 public largestCommonIncreaseSequence(int[] arr) {
   int len = arr.length;
@@ -57,3 +57,10 @@ public largestCommonIncreaseSequence(int[] arr) {
   return max;
 }
 ```
+
+### 杂谈
+2021-8-8号周赛考了一套最长子序列问题，我使用了treeMap结构，出现了TLE了，最后一些单元测试没法通过。这道题的解法二完全不记得了，只记得解法一的写法。
+真是无语了。
+
+### 参考文档
+https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/dong-tai-gui-hua-er-fen-cha-zhao-tan-xin-suan-fa-p/
