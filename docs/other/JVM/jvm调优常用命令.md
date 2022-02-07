@@ -11,7 +11,7 @@
 生成虚拟机的内存转储快照
 
 5. jhat
-用于headdump的文件分析
+用于heapdump的文件分析
 
 6. jstack
 显示虚拟机的线程快照
