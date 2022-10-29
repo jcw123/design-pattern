@@ -32,7 +32,7 @@ public enum PooledObjectState {
     VALIDATION,
     // 正在被验证的对象，一单验证通过，会直接通过borrow借出。
     VALIDATION_PREALLOCATED,
-    // 驱逐线程验证的对象，没问题回将对象放到队列的头部
+    // 驱逐线程验证的对象，没问题会将对象放到队列的头部
     VALIDATION_RETURN_TO_HEAD,
     // 不合法的对象，之后会被移出
     INVALID,
@@ -114,7 +114,7 @@ private void ensureIdle(final int idleCount, final boolean always) throws Except
 和removeAbandonedOnMaintenance这个参数其中之一设置为true时才能起作用。
 
 - removeAbandonedOnBorrow
-> 表示当在pool中拿连接时，尝试将废弃的连接移除掉。
+> 表示当在pool中拿连接时，尝试将废弃的连接移除掉。注：调用borrowObject时会触发检查
 
 - minEvictableIdleTimeMillis
 > 表示一个连接持续minEvictableIdleTimeMillis这么长的时间一直处于空闲时，空闲连接会尝试驱逐。注：主要可以防止一个连接空闲时间太久了，服务端主要将连接断开了，导致连接时效，从而查库失败。
@@ -339,7 +339,7 @@ public void validateConnection(final PoolableConnection conn) throws SQLExceptio
 ```
 
 - removeAbandonedOnMaintenance
-> 当对pool进行检查时，移除超时的废弃连接。也是在驱逐线程的evict()方法中用到这个参数
+> 当对pool进行检查时，移除超时的废弃连接。也是在驱逐线程的evict()方法中用到这个参数。强调：这个依赖于驱逐线程的执行；
 
 - evictionPolicyClassName
 > 定义驱逐策略的类，也就是一个线程是否应该进行驱逐可以自己定义一个EvictionPolicy这个接口的实现类。
