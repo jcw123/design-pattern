@@ -1,0 +1,34 @@
+# xml
+
+```go
+package main
+
+import (
+    "fmt"
+    "encoding/xml"
+)
+
+type Plant struct {
+    XmlName xml.Name  `xml:root`
+    Id `xml:id,attr`
+    Name `xml:name`
+    Hobby `xml:hobby` 
+}
+
+func (p *Plant) String() string {
+    return fmt.Sprintf("id:%v, name:%v, hobby:%v\n", p.Id, p.Name, p.Hobby)
+}
+
+func main() {
+    p := &Plant{Id:1, Name:"jcw"}
+    p.Hobby = "play"
+
+    out, _  := xml.MarshallIndent(p, " ",  "  ")
+    fmt.Println(string(out))
+    fmt.Println(xml.Header + string(out))
+
+    var s Plant
+    xml.Unmarshall(out, &s)
+    fmt.Println(s)
+}
+```

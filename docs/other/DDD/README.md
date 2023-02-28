@@ -5,3 +5,6 @@
 
 2、介绍java中各种Object参考文档
 https://www.zhihu.com/question/39651928/answer/369889819
+
+## 参考文档
+[理解值对象](https://cloud.tencent.com/developer/article/1790794)
