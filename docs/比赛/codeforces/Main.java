@@ -8,7 +8,7 @@ public class Main {
         int n = sc.nextInt();
         int d = sc.nextInt();
         Set<Integer> set = new HashSet<>();
-        for(int i = 1; i <= d; i++) {
+        for(int i = 1; i <= d; i++) { 
             if(i % k == 0 || i % l == 0 || i % m == 0 || i % n == 0) {
                 set.add(i);
             }
