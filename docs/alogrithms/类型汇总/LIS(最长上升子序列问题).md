@@ -18,7 +18,7 @@ public largestCommonIncreaseSequence(int[] arr) {
         int j = i - 1;
         while(j >= 0 {
             if(arr[j] < arr[i]) {
-                cLen = Math.max(cLen, dp[j]);
+                cLen = Math.max(cLen, dp[j] + 1);
             }
             j--;
         }
