@@ -45,8 +45,8 @@ class Solution {
     Arrays.fill(vis, false);
     Arrays.fill(dist, INF);
     dist[k] = 0;
-    int t = -1;
     for(int p = 1; p <= n; p++) {
+      int t = -1;
       for(int i = 1; i <= n; i++) {
         if(!visit[i] && (t == -1 || dist[i] < dist[t])) {
             t = i;

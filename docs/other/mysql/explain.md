@@ -1,4 +1,4 @@
-##### explain
+# explain
 可以进行select性能分析；
 参考文章：https://segmentfault.com/a/1190000008131735
 https://www.cnblogs.com/xuanzhi201111/p/4175635.html
@@ -59,13 +59,15 @@ https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Han
 > The join type
 
 - system
+> 表中就写了一条数据
 如果表只有一行，这个是const的一种特例；
 
 - const
+> 表中最多只有一条匹配数据，在查询的开始，将主键索引或者唯一索引跟一个常量进行等号匹配。
 表示一个表中只有一行匹配，通过主键索引或者唯一索引进行过滤，将这两种索引将一个常量值进行比较；
 
 - eq_ref
-用于join类型查询和主键查询或者唯一索引查询模式，这种查询模式性能很高，合适的join类型查询
+对于关联查询，对于当前表中的每一条数据最多在前一个表中最多只有一条进行匹配。这就是通过主键索引或者唯一索引进行匹配的模式。
 
 - ref
 使用到了索引，但是join模式，基于前一个表的一行数据，在下一个表中匹配的数据不止一行。如果使用最左前缀，或者
@@ -90,29 +92,45 @@ https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Han
 用于=,<>,>,>=,<,<=,IS NULL, <=>, BETWEEN,LIKE or IN();
 
 - index
+> 命中了覆盖索引的模式
 这种方式非常类似于ALL模式，性能很差，有两种场景会用到：（1）如果一个覆盖索引能够包含索要查询的数据；（2）
 如果仅仅统计行数；
 
 - ALL
 最坏的一种方式，应该避免这种情况出现；
 
-6. possible_keys
+1. possible_keys
 > The possible indexes to choose
 
-7. key
+1. key
 > The index actually chosen
 
-8. key_len
+1. key_len
 > The length of the chosen key
 
-9. ref
+1. ref
 > The columns compared to the index
 
-10. rows
+1.  rows
 > Estimate of rows to be examined
 
-11. filtered
+1.  filtered
 > Percentage of rows filtered by table condition
 
-12. extra
+1.  extra
 > Additional information
+>
+
+## 执行计划的选择过程
+```sql
+SET optimizer_trace="enabled=on";
+select * from t1;
+select * from information_schema.OPTIMIZER_TRACE;
+SET optimizer_trace="enabled=off";
+```
+
+
+##  参考文档
+[官网文档](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain-join-types)
+[引擎选择索引过程](https://www.cnblogs.com/jimoer/p/14461051.html)
+

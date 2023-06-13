@@ -19,3 +19,6 @@
 5、官网教程
 https://standardmarkdown.com/
 https://guides.github.com/features/mastering-markdown/
+
+6、数学公式
+https://blog.csdn.net/Katherine_hsr/article/details/79179622

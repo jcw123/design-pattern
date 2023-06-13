@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type node struct {
 	op int  // 1：新增；-1：删除；0：不变
 	s  byte // 当前行的字符串
@@ -66,9 +64,9 @@ func myers(s string, t string) []node {
 
 }
 
-func main() {
-	s := "abcd"
-	t := "ace"
-	nodes := myers(s, t)
-	fmt.Println(nodes)
-}
+// func main() {
+// 	s := "abcd"
+// 	t := "ace"
+// 	nodes := myers(s, t)
+// 	fmt.Println(nodes)
+// }

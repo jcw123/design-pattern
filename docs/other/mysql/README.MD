@@ -18,8 +18,10 @@
 （10）ORDER BY: 对虚拟表VT9按照指定的列进行排序操作，产生虚拟表VT10
 （11）LIMIT：取出指定的行，产生虚拟表VT11，返回给用户。
 - having和where的区别：
-参考文档：https://zhuanlan.zhihu.com/p/100574455
+参考文档：https://blog.csdn.net/HD243608836/article/details/88813269
 where是一个约束声明，having是一个过滤声明
+having 要和 group by成组使用，having是对已经分好的组进行过滤操作，用的是聚合函数来操作的
+where语句对对表中的每一条记录进行操作的，只有满足条件才能返回结果
 
 - on和where的区别：
 参考文章：https://zhuanlan.zhihu.com/p/127137604
@@ -37,3 +39,6 @@ select * from information_schema.innodb_locks;
 
 #锁等待的对应关系
 select * from information_schema.innodb_lock_waits
+
+## 参考文档
+[mysql线程池问题](https://cloud.tencent.com/developer/article/1068832)
