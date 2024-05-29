@@ -5,7 +5,6 @@
 
 
 ## 参考文件
-* [protobuf 原理说明](http://f.jd.com/pages/viewpage.action?pageId=274955309)
 * [POJO生成proto](https://github.com/webbynet/protostuff-runtime-proto)
 * [questions protostuff](https://stackoverflow.com/questions/tagged/protostuff)
 * [邮件群组](https://groups.google.com/g/protostuff)
