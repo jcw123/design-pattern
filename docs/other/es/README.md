@@ -45,7 +45,7 @@
 [官方文档](https://www.elastic.co/guide/index.html)
 [7.15版本之后推荐的java客户端](https://www.elastic.co/guide/en/elasticsearch/client/java-api-client/7.17/installation.html)
 [rest-java使用说明](https://juejin.cn/post/7046759829255225351)
-[setting配置](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html#index-number-of-shards)
+[setting配置](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/index-modules.html)
 [es客户端使用讨论区](https://discuss.elastic.co/latest)
 
 1. 倒排索引参考文章

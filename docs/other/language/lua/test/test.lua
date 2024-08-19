@@ -16,3 +16,8 @@ end
 
 
 print(tonumber(''))
+
+
+if nil == false then
+    print('ok')
+end
