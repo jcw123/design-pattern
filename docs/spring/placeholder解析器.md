@@ -1,0 +1,6 @@
+# placeholder解析器
+
+## PropertyPlaceholderConfigurer
+spring3.X版本以下的占位符解析方式，这个配置类实现了BeanFactoryPostProcessor接口，作为bean工厂的后置处理器执行。如果存在多个placeholder类，将配置信息分别维护，需要指定
+
+## PropertySourcesPlaceholdeerConfigurer

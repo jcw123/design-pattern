@@ -42,3 +42,4 @@ select * from information_schema.innodb_lock_waits
 
 ## 参考文档
 [mysql线程池问题](https://cloud.tencent.com/developer/article/1068832)
+[菜鸟教程](https://www.runoob.com/mysql/mysql-tutorial.html)
