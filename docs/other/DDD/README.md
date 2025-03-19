@@ -6,6 +6,13 @@
 2、介绍java中各种Object参考文档
 https://www.zhihu.com/question/39651928/answer/369889819
 
+
+## 备注
+1、 避免职责过载
+对象承载的职责应该是清晰且明确的，如果承载的职责过多，会导致模型过于复杂，难于理解；
+
+2、进行不同层次的接口设计时，需要显式揭露接口的意图及模型的细节，防止去使用时去感知过多的细节；
+
 ## 参考文档
 [理解值对象](https://cloud.tencent.com/developer/article/1790794)
 [领域模型](https://www.zhihu.com/question/25089273)

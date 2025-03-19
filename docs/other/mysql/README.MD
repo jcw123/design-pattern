@@ -1,3 +1,5 @@
+# MYSQL
+
 ## 执行步骤顺序
 （1）From：对FROM子句中的left_table和right_table执行
 笛卡尔积，产生虚拟表VT1；  
@@ -40,6 +42,10 @@ select * from information_schema.innodb_locks;
 #锁等待的对应关系
 select * from information_schema.innodb_lock_waits
 
+## 备注
+1、不可重复读关注的是同一行数据的不同版本，而幻读关注的是在同一查询条件下出现的新行。
+
 ## 参考文档
 [mysql线程池问题](https://cloud.tencent.com/developer/article/1068832)
 [菜鸟教程](https://www.runoob.com/mysql/mysql-tutorial.html)
+[mysql语法官方文档](https://dev.mysql.com/doc/refman/5.7/en/sql-statements.html)
